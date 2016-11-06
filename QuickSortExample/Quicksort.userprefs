@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Quicksort/Quicksort.vcxproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|Win32" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quicksort/ProccessHandler.cpp">
+    <Files>
+      <File FileName="Quicksort/DisplayHandler.h" Line="1" Column="1" />
+      <File FileName="Quicksort/main.cpp" Line="1" Column="1" />
+      <File FileName="Quicksort/QuicksortClass.cpp" Line="1" Column="1" />
+      <File FileName="Quicksort/ProccessHandler.h" Line="1" Column="1" />
+      <File FileName="Quicksort/QuicksortClass.h" Line="22" Column="24" />
+      <File FileName="Quicksort/ProccessHandler.cpp" Line="14" Column="20" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

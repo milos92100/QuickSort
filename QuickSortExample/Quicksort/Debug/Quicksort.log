@@ -1,0 +1,19 @@
+﻿Build started 11/23/2014 10:09:32 PM.
+     1>Project "C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Quicksort\Quicksort.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DisplayHandler.cpp
+         DisplayHandler.cpp
+     1>c:\users\administrator\documents\visual studio 2012\projects\quicksort\quicksort\displayhandler.cpp(213): warning C4551: function call missing argument list
+     1>c:\users\administrator\documents\visual studio 2012\projects\quicksort\quicksort\displayhandler.cpp(278): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Debug\Quicksort.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Debug\Quicksort.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Debug\Quicksort.lib" /MACHINE:X86 Debug\DisplayHandler.obj
+         Debug\main.obj
+         Debug\ProccessHandler.obj
+         Debug\QuicksortClass.obj
+         Debug\Settings.obj
+         Quicksort.vcxproj -> C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Debug\Quicksort.exe
+     1>Done Building Project "C:\Users\Administrator\documents\visual studio 2012\Projects\Quicksort\Quicksort\Quicksort.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.13
