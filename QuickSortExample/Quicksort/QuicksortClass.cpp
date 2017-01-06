@@ -1,4 +1,5 @@
 #include "QuicksortClass.h"
+#include "ProccessHandler.h"
 #include <thread>
 #include <unistd.h>
 
@@ -33,6 +34,22 @@ void QuicksortClass::sortData() {
     quicksort(data, 0, size - 1);
     cout << "Sortiran niz: ";
     print(data);
+
+    Display display = Display(800, 600, "Quick Sort Algorithm Example");
+
+    for (int i = 0; i < m_sortResult.size(); i++) {
+        display.Clear(0, 0, 0, 0);
+        display.drawSortedNumbers(m_sortResult[i]);
+        display.Update();
+
+    }
+
+    while (!display.isClosed()) {
+
+        display.Clear(0.0f, 0.0f, 0.0f, 1.0f);
+        display.Update();
+
+    }
 }
 
 
@@ -50,9 +67,14 @@ long QuicksortClass::partition(vector<int> &input, int p, int r) {
         if (input[p] == input[r])
             p++;
         else if (p < r) {
+
             int tmp = input[p];
+
             input[p] = input[r];
+            m_sortResult.push_back(input);
+
             input[r] = tmp;
+            m_sortResult.push_back(input);
 
         }
     }
@@ -62,29 +84,36 @@ long QuicksortClass::partition(vector<int> &input, int p, int r) {
 }
 
 void QuicksortClass::quicksort(vector<int> &input, int p, int r) {
+
     if (p < r) {
         // Sleep(delay);windows
-        sleep(delay / 1000);
-        //print(input);
+        //sleep(delay / 1000);
+
+
         int j = partition(input, p, r);
         quicksort(input, p, j - 1);
+        //print(input);
 
-        print(input);
 
         quicksort(input, j + 1, r);
+        // print(input);
 
         //  Sleep(delay);windows
-        sleep(delay / 1000);
-        print(input);
+        //sleep(delay / 1000);
+
 
     }
 }
 
 void QuicksortClass::print(vector<int> input) {
+
     for (int i = 0; i < size; i++)
+
         cout << input.at(i) << " ";
     cout << endl;
 }
+
+
 
 
 

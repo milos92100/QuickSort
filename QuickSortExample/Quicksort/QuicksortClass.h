@@ -1,7 +1,8 @@
 #pragma once
+
 #include <iostream>
 #include <vector>
-
+#include "Display.h"
 
 
 using namespace std;
@@ -9,27 +10,34 @@ using namespace std;
 int const temp_size = 10;
 
 
-class QuicksortClass
-	{
+class QuicksortClass {
 
-	private:
-		vector<int> data;
-		int size;
-		int delay;
+private:
+    vector<int> data;
+    int size;
+    int delay;
 
-	public:
+    vector<vector<int>> m_sortResult;
 
-		QuicksortClass(void);
-		~QuicksortClass(void);
+public:
 
-        void inputData(vector<int>arr);
-		void setArraySize(int s);
-		void setDelay(int d);
-		void sortData();
+    QuicksortClass(void);
 
-		long partition(vector<int> &input, int p, int r);
-		void quicksort(vector<int> &input, int p, int r);
-		void print(vector<int>input);
+    ~QuicksortClass(void);
+
+    void inputData(vector<int> arr);
+
+    void setArraySize(int s);
+
+    void setDelay(int d);
+
+    void sortData();
+
+    long partition(vector<int> &input, int p, int r);
+
+    void quicksort(vector<int> &input, int p, int r);
+
+    void print(vector<int> input);
 
 
 };

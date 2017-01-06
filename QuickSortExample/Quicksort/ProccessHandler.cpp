@@ -1,6 +1,7 @@
 #include "ProccessHandler.h"
 #include "DisplayHandler.h"
 #include "Settings.h"
+#include "Display.h"
 
 #include <thread>
 #include "QuicksortClass.h"
@@ -24,6 +25,9 @@ void ProccessHandler::mainProccess() {
     vector<int> my_vec;
     vector<int> def_vec;
 
+    QuicksortClass quickSort = QuicksortClass();
+
+
     DisplayHandler::displayRequestInputType(array_param);
 
     if (array_param == Settings::CUSTOM_ARRAY) {
@@ -35,7 +39,6 @@ void ProccessHandler::mainProccess() {
 
         my_vec = DisplayHandler::displayRequestArrayInput(array_size);
 
-        QuicksortClass quickSort = QuicksortClass();
 
         quickSort.inputData(my_vec);
 
@@ -58,7 +61,6 @@ void ProccessHandler::mainProccess() {
 
     if (array_param == Settings::DEFAULT_ARRAY) {
 
-        QuicksortClass quickSort = QuicksortClass();
 
         DisplayHandler::displayRequestArraySize(array_size);
 
@@ -92,7 +94,7 @@ vector<int> ProccessHandler::generateRandomVector(int &size) {
 
     for (int i = 0; i < size; i++) {
 
-        int num = (rand() % 100);
+        int num = (rand() % 500);
         temp.push_back(num);
     }
 
@@ -100,6 +102,7 @@ vector<int> ProccessHandler::generateRandomVector(int &size) {
 
 
 }
+
 
 
 

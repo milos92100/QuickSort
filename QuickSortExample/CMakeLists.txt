@@ -12,7 +12,7 @@ set(SOURCE_FILES
         Quicksort/QuicksortClass.cpp
         Quicksort/QuicksortClass.h
         Quicksort/Settings.cpp
-        Quicksort/Settings.h Quicksort/Display.cpp Quicksort/Display.h)
+        Quicksort/Settings.h Quicksort/Display.cpp Quicksort/Display.h Quicksort/Mesh.cpp Quicksort/Mesh.h)
 
 
 find_package(OpenGL REQUIRED)

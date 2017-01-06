@@ -7,6 +7,7 @@
 
 #include <string>
 #include <SDL2/SDL.h>
+#include <vector>
 
 using namespace std;
 
@@ -17,7 +18,15 @@ public:
 
     ~Display();
 
+    void Clear(float r, float g, float b, float a);
+
+    void drawRect(SDL_Rect rect);
+
+    void drawSortedNumbers(vector<int> &numbers);
+
     void Update();
+
+    void init();
 
     bool isClosed();
 
@@ -25,7 +34,13 @@ public:
 private:
     SDL_Window *m_window;
     SDL_GLContext m_glContext;
+    SDL_Surface *m_screen;
+    SDL_Renderer *m_renderer;
     bool m_isClosed = false;
+    int m_width;
+    int m_height;
+
+    SDL_Rect createRect(int value, int index, int count);
 
 };
 
