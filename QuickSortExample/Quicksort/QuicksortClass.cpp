@@ -41,7 +41,7 @@ void QuicksortClass::sortData() {
         display.Clear(0, 0, 0, 0);
         display.drawSortedNumbers(m_sortResult[i]);
         display.Update();
-
+        sleep(delay / 1000);
     }
 
     while (!display.isClosed()) {
@@ -71,7 +71,7 @@ long QuicksortClass::partition(vector<int> &input, int p, int r) {
             int tmp = input[p];
 
             input[p] = input[r];
-            m_sortResult.push_back(input);
+            // m_sortResult.push_back(input);
 
             input[r] = tmp;
             m_sortResult.push_back(input);
@@ -86,22 +86,10 @@ long QuicksortClass::partition(vector<int> &input, int p, int r) {
 void QuicksortClass::quicksort(vector<int> &input, int p, int r) {
 
     if (p < r) {
-        // Sleep(delay);windows
-        //sleep(delay / 1000);
-
-
         int j = partition(input, p, r);
         quicksort(input, p, j - 1);
-        //print(input);
-
 
         quicksort(input, j + 1, r);
-        // print(input);
-
-        //  Sleep(delay);windows
-        //sleep(delay / 1000);
-
-
     }
 }
 
